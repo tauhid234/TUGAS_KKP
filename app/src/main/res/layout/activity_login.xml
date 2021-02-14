@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".login">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/logo_splash"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:layout_marginTop="260dp"
+        android:textColor="@color/black"
+        android:text="Welcome Back"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="12dp"
+        android:layout_marginTop="290dp"
+        android:text="Log in to your existant account"/>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:padding="14dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="330dp"/>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="14dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="400dp"/>
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@color/design_default_color_primary"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"/>
+
+</RelativeLayout>
