@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment_home">
 
     <!-- TODO: Update blank fragment layout -->
@@ -19,14 +20,62 @@
             android:tintMode="multiply"/>
     </LinearLayout>
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:textAlignment="center"
-        android:layout_gravity="center"
-        android:layout_marginTop="200dp"
-        android:text="" />
+        android:orientation="vertical">
+        <GridView
+            android:id="@+id/boxGridview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:numColumns="3"
+            android:layout_marginTop="130dp"
+            android:stretchMode="columnWidth"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <GridView
+            android:id="@+id/gridview"
+            android:backgroundTint="@color/purple_700"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:numColumns="4"
+            android:gravity="bottom"
+            android:layout_marginTop="240dp"
+            android:stretchMode="columnWidth"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FC427B"
+            android:layout_marginTop="540dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                        <com.synnapps.carouselview.CarouselView
+                            android:id="@+id/carousel_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="194dp"
+                            app:animateOnBoundary="true"
+                            app:fillColor="#ffff"
+                            app:pageColor="#00000000"
+                            app:radius="6dp"
+                            app:slideInterval="3000"
+                            app:strokeColor="#FF77"
+                            app:strokeWidth="1dp"/>
+                </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
 
 </FrameLayout>

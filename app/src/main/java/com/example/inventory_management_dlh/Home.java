@@ -35,31 +35,21 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     Context context;
     ArrayList prgName;
 
-    public static String [] NameList = {"Add","Report","Admin","Products","Help"};
-    public static int [] ImageList = {R.drawable.ic_baseline_create_24,
-                                      R.drawable.ic_baseline_description_24,
-                                      R.drawable.ic_baseline_assignment_ind_24,
-                                      R.drawable.ic_baseline_assignment_24,
-                                      R.drawable.ic_baseline_help_24};
+//    public static String [] NameList = {"Add","Report","Admin","Products","Help"};
+//    public static int [] ImageList = {R.drawable.ic_baseline_create_24,
+//                                      R.drawable.ic_baseline_description_24,
+//                                      R.drawable.ic_baseline_assignment_ind_24,
+//                                      R.drawable.ic_baseline_assignment_24,
+//                                      R.drawable.ic_baseline_help_24};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        gridView = (GridView) findViewById(R.id.gridview);
-        gridView.setAdapter(new CustomAdapter(Home.this,NameList,ImageList));
+//        gridView = (GridView) findViewById(R.id.gridview);
+//        gridView.setAdapter(new CustomAdapter(Home.this,NameList,ImageList));
 
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if(position==0){
-//                    Intent intent = new Intent(Home.this, login.class);
-//                    startActivity(intent);
-                    System.out.println("Add");
-                }
-            }
-        });
         toolbar = findViewById(R.id.topBar);
         setSupportActionBar(toolbar);
 
@@ -89,12 +79,12 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         switch (Menunya){
             case R.id.dashboard :
                 fragment = new fragment_home();
-                gridView.setVisibility(View.VISIBLE);
+//                gridView.setVisibility(View.VISIBLE);
                 break;
 
             case R.id.profile :
                 fragment = new fragment_profile();
-                gridView.setVisibility(View.GONE);
+//                gridView.setVisibility(View.GONE);
                 break;
         }
 

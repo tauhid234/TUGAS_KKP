@@ -41,10 +41,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:title="@string/app_name"
+                app:subtitle="DLH KRAMAT JATI"
                 app:navigationIcon="@drawable/baseline_menu_black_18dp"
                 style="@style/Widget.MaterialComponents.Toolbar.Primary"
-                android:background="@android:color/holo_red_light"/>
+                android:background="#25CCF7"/>
         </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
             
             <FrameLayout
                 android:id="@+id/flayout"
@@ -52,20 +60,23 @@
                 android:layout_height="match_parent"
                 app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"/>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <GridView
-                    android:id="@+id/gridview"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:numColumns="3"
-                    android:gravity="bottom"
-                    android:layout_marginTop="200dp"
-                    android:stretchMode="columnWidth"/>
-            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:orientation="vertical">-->
+<!--                <GridView-->
+<!--                    android:id="@+id/gridview"-->
+<!--                    android:backgroundTint="@color/purple_700"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:numColumns="3"-->
+<!--                    android:gravity="bottom"-->
+<!--                    android:layout_marginTop="200dp"-->
+<!--                    android:stretchMode="columnWidth"/>-->
+<!--            </RelativeLayout>-->
+
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -76,12 +87,4 @@
         app:menu="@menu/drawer"
         android:layout_gravity="start"/>
 
-
-<!--    <androidx.core.widget.NestedScrollView-->
-<!--        android:id="@+id/view"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
-
-<!--    </androidx.core.widget.NestedScrollView>-->
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -8,14 +8,16 @@
 
     <ImageView
         android:id="@+id/imgView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_gravity="center"
+        android:padding="10dp"
         android:layout_marginTop="50dp"
         android:layout_marginBottom="5dp"
         android:src="@drawable/bg_test"
         android:backgroundTintMode="multiply"
-        app:tint="#45aaf2" />
+        android:background="@drawable/rectangle"
+        app:tint="#ffff" />
 
     <TextView
         android:id="@+id/textGrid"
