@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ApiClient {
 
-    public static final String BASE_URL = "https://witty-ape-58.loca.lt/api/";
+    public static final String BASE_URL = "http://f941b1892145.ngrok.io/api/";
     private static Retrofit retrofit = null;
 
     public static Retrofit getClient(){

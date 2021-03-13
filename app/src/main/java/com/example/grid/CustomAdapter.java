@@ -1,8 +1,12 @@
 package com.example.grid;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.telephony.SmsManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +15,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.core.content.ContextCompat;
+
 import com.example.inventory_management_dlh.Home;
+import com.example.inventory_management_dlh.Inventory;
 import com.example.inventory_management_dlh.MainActivity;
 import com.example.inventory_management_dlh.R;
 
@@ -65,12 +72,24 @@ public class CustomAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context,result[position], Toast.LENGTH_LONG).show();
-                if(position==1){
-                    Intent intent = new Intent(context.getApplicationContext(), MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                if(position==0){
+                    Intent intent = new Intent(context.getApplicationContext(), Inventory.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
+                }else if(position == 1){
+                    System.out.println("REPORT");
+                        if(ContextCompat.checkSelfPermission(context, Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED){
+                            sendSMS();
+                        }
                 }
             }
         });
         return row;
+    }
+
+    private void sendSMS(){
+            SmsManager smsManager  = SmsManager.getDefault();
+            smsManager.sendTextMessage("085695673132",null,"SEND SMS LOCAL ANDROID",null,null);
+            Toast.makeText(context,"Message is send",Toast.LENGTH_SHORT).show();
+
     }
 }

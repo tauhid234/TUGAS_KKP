@@ -5,13 +5,16 @@ import com.google.gson.annotations.SerializedName;
 public class Admin {
     @SerializedName("name")
     private String name;
+    @SerializedName("email")
+    private String email;
     @SerializedName("api_key")
     private String key;
 
     public Admin(){}
 
-    public Admin(String name, String key){
+    public Admin(String name, String email, String key){
         this.name = name;
+        this.email = email;
         this.key = key;
     }
 
@@ -31,4 +34,11 @@ public class Admin {
         return name;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
 }

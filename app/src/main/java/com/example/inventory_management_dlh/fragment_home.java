@@ -35,6 +35,9 @@ public class fragment_home extends Fragment {
     GridView gridView;
     GridView box;
 
+    TextView txt;
+
+
     CarouselView carouselView;
 
     public fragment_home() {
@@ -53,6 +56,11 @@ public class fragment_home extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_home, container, false);
+
+//        txt = v.findViewById(R.id.logo_text);
+//        String s = getArguments().getS("namaku");
+//
+//        txt.setText(s);
 
         gridView = v.findViewById(R.id.gridview);
         gridView.setAdapter(new CustomAdapter((Home) getActivity(),NameList,ImageList));

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".EditProfile">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:background="@drawable/flat_design2"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top|left"
+        android:padding="12dp"
+        android:layout_margin="12dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25dp"
+        android:text="Edit Profile"/>
+    </LinearLayout>
+
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|right"-->
+<!--        android:layout_marginTop="450dp"-->
+<!--        android:layout_margin="16dp"-->
+<!--        android:backgroundTint="#48dbfb"-->
+<!--        android:src="@drawable/ic_baseline_create_24" />-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="22dp"
+                android:textSize="18dp"
+                android:text="Username"/>
+
+            <EditText
+                android:id="@+id/usernameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="22dp"
+                android:padding="12dp"
+                android:backgroundTint="@color/purple_200"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="22dp"
+            android:textSize="18dp"
+            android:text="Jabatan"/>
+
+        <EditText
+            android:id="@+id/jabatanEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="22dp"
+            android:padding="12dp"
+            android:backgroundTint="@color/purple_200"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="22dp"
+            android:textSize="18dp"
+            android:text="Email"/>
+
+        <EditText
+            android:id="@+id/emailEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="22dp"
+            android:padding="12dp"
+            android:backgroundTint="@color/purple_200"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="22dp"
+            android:textSize="18dp"
+            android:text="No Handphone"/>
+
+        <EditText
+            android:id="@+id/nohpEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="22dp"
+            android:inputType="number"
+            android:padding="12dp"
+            android:backgroundTint="@color/purple_200"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="22dp"
+            android:textSize="18dp"
+            android:text="Alamat"/>
+
+        <EditText
+            android:id="@+id/alamatEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="22dp"
+            android:padding="12dp"
+            android:backgroundTint="@color/purple_200"/>
+
+         <Button
+             android:id="@+id/editButton"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_marginTop="20dp"
+             android:text="SIMPAN PERUBAHAN"
+             android:textColor="@color/white"
+             android:backgroundTint="#40407a"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

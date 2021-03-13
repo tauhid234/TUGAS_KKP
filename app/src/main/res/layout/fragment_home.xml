@@ -20,6 +20,10 @@
             android:tintMode="multiply"/>
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/logo_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -77,5 +81,64 @@
                 </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginTop="725dp">-->
+<!--        <HorizontalScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:id="@+id/horizontalScrollView">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
+<!--                <Button-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="New Button1"-->
+<!--                    android:id="@+id/button1" />-->
+<!--                <Button-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="New Button2"-->
+<!--                    android:id="@+id/button2" />-->
+
+<!--                <Button-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="New Button3"-->
+<!--                    android:id="@+id/button3" />-->
+<!--                <Button-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="New Button4"-->
+<!--                    android:id="@+id/button4" />-->
+<!--                <Button-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="New Button5"-->
+<!--                    android:id="@+id/button5" />-->
+<!--                <Button-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="New Button6"-->
+<!--                    android:id="@+id/button6" />-->
+<!--                <Button-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="New Button7"-->
+<!--                    android:id="@+id/button7" />-->
+<!--                <Button-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="New Button8"-->
+<!--                    android:id="@+id/button8"/>-->
+<!--            </LinearLayout>-->
+
+<!--        </HorizontalScrollView>-->
+<!--    </LinearLayout>-->
 
 </FrameLayout>

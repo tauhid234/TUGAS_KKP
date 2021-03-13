@@ -15,12 +15,18 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.BaseAdapter;
 import android.widget.GridView;
+import android.widget.TextView;
 
+import com.example.Model.Admin;
 import com.example.grid.CustomAdapter;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
+
+import retrofit2.Call;
+import retrofit2.Response;
 
 public class Home extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -30,6 +36,9 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
 
     Fragment fragment;
     FragmentTransaction transaction;
+
+
+    private String datanya;
 
     GridView gridView;
     Context context;
@@ -46,6 +55,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+
+        Bundle extras = getIntent().getExtras();
+        datanya = extras.getString("name");
+
 
 //        gridView = (GridView) findViewById(R.id.gridview);
 //        gridView.setAdapter(new CustomAdapter(Home.this,NameList,ImageList));
@@ -83,7 +97,10 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
                 break;
 
             case R.id.profile :
+                Bundle bundle = new Bundle();
+                bundle.putString("namaku",datanya);
                 fragment = new fragment_profile();
+                fragment.setArguments(bundle);
 //                gridView.setVisibility(View.GONE);
                 break;
         }
@@ -110,5 +127,11 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
         }else{
             super.onBackPressed();
         }
+    }
+
+    public void onBackPressed(){
+        super.onBackPressed();
+        finish();
+        moveTaskToBack(true);
     }
 }
